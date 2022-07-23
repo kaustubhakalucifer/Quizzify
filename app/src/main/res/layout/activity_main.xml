@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textSize="65sp"
+        android:padding="90dp"
+        android:textColor="@color/design_default_color_secondary_variant"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:id="@+id/app_name"
+        />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="300dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_height="wrap_content"
+        android:hint="@string/name_hint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:boxStrokeColor="#008080"
+        android:layout_gravity="center"
+        app:boxStrokeWidth="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_name"
+        android:textColorHint="#008080"
+        app:endIconMode="clear_text"
+        app:counterEnabled="true"
+        app:counterMaxLength="10"
+        android:id="@+id/name_et"
+        app:errorEnabled="true"
+        app:hintTextColor="#008080"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/start_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name_et"
+        android:textSize="25sp"
+        android:layout_marginTop="70dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/start_btn"
+        android:id="@+id/about_btn"
+        android:layout_marginTop="30dp"
+        app:backgroundTint="#DCDCDC"
+        app:icon="@drawable/outline_help_outline_black_24dp"
+        app:iconTint="#008080"
+        app:fabSize="normal"
+        app:iconSize="40dp"
+        android:layout_gravity="bottom"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
